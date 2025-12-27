@@ -1,3 +1,35 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://whyamiherewhyamihere.github.io/frontend-site/"
+languageCode = "ru-ru"
+title = "Портфолио"
+
+theme = "portfolio-theme"
+
+# Для GitHub Pages важно, чтобы ссылки корректно строились из подпути /REPO/
+canonifyURLs = true
+
+[pagination]
+pagerSize = 10
+
+[params]
+description = "Личное портфолио на Hugo (ITMO)."
+
+[menu]
+  [[menu.main]]
+    name = "Главная"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Обо мне"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Проекты"
+    url = "/projects/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Посты"
+    url = "/posts/"
+    weight = 4

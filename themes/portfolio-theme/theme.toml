@@ -1,0 +1,5 @@
+name = "portfolio-theme"
+license = "MIT"
+licenselink = ""
+description = "Minimal portfolio theme bundled with the site"
+min_version = "0.110.0"

@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <section class="prose">
+    {{ .Content }}
+
+    <hr />
+
+    <h2>Последние материалы</h2>
+    <ul class="card-list">
+      {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+        <li class="card">
+          <a class="card-link" href="{{ .RelPermalink }}">
+            <div class="card-title">{{ .Title }}</div>
+            {{ with .Params.description }}<div class="card-desc">{{ . }}</div>{{ end }}
+            {{ with .Date }}<div class="card-meta">{{ .Format "02.01.2006" }}</div>{{ end }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
